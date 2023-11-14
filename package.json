@@ -1,27 +1,51 @@
 {
-  "name": "contentlayer-example",
+  "name": "contentlayer-with-i18n-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "npm --prefix ./packages/static-analyzer install",
+    "prebuild": "npm --prefix ./packages/static-analyzer start -- --posts-folder ./posts --blog-config-file ./src/config/blog.ts --i18n-locales-schema ./src/i18n/locales/schema.ts",
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.2"
+    "next": "14.0.2",
+    "next-international": "1.1.4",
+    "contentlayer": "^0.3.4",
+    "next-contentlayer": "^0.3.4",
+    "@next/bundle-analyzer": "^14.0.2",
+    "intl-locale-textinfo-polyfill": "^2.1.1",
+    "class-variance-authority": "^0.7.0",
+    "next-themes": "^0.2.1",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^1.14.0",
+    "react-spinners": "^0.13.8",
+    "slugify": "^1.6.6",
+    "tailwindcss-animate": "^1.0.7",
+    "@radix-ui/react-slot": "^1.0.2",
+    "date-fns": "^2.30.0",
+    "react-paginate": "8.1.3",
+    "@heroicons/react": "^2.0.18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "typescript": "^5.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "3.3.3",
     "eslint": "^8",
-    "eslint-config-next": "14.0.2"
+    "eslint-config-next": "14.0.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "next-sitemap": "^4.2.3",
+    "@transloadit/ts-fly": "^0.1.4",
+    "static-analyzer": "file:./packages/static-analyzer"
   }
 }
