@@ -9,8 +9,9 @@ export async function generateMetadata({ params }: BlogCategoryPageProps) {
   return getBlogCategoryMetadatas({ params });
 }
 
-export function generateStaticParams() {
-  return getBlogStaticParams();
+export async function generateStaticParams() {
+  const staticParams = await getBlogStaticParams();
+  return staticParams;
 }
 
 export default function Page({ params }: BlogCategoryPageProps) {

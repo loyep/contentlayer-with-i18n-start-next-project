@@ -7,13 +7,14 @@ import type { BlogPostPageProps } from '@/types/Blog';
 import { setStaticParamsLocale } from 'next-international/server';
 
 export async function generateMetadata({ params }: BlogPostPageProps) {
-  blogPostGuard({ params });
+  await blogPostGuard({ params });
   const blogPostMetadatas = await getBlogPostMetadatas({ params });
   return blogPostMetadatas;
 }
 
-export function generateStaticParams() {
-  return getBlogStaticParams();
+export async function generateStaticParams() {
+  const staticParams = await getBlogStaticParams();
+  return staticParams;
 }
 
 export default function Page({ params }: BlogPostPageProps) {
