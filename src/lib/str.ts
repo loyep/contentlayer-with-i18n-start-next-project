@@ -5,6 +5,7 @@ import capitalize from './app-agnostic/str/capitalize';
 import compareAlphabetically from './app-agnostic/str/compareAlphabetically';
 import fromKebabCaseToSentenceCase from './app-agnostic/str/fromKebabCaseToSentenceCase';
 import getFormattedDate from './app-agnostic/str/getFormattedDate';
+import pluralize from './app-agnostic/str/pluralize';
 
 export {
   buildAbsolutePathFromParts,
@@ -13,5 +14,6 @@ export {
   capitalize,
   compareAlphabetically,
   fromKebabCaseToSentenceCase,
-  getFormattedDate
+  getFormattedDate,
+  pluralize
 };
