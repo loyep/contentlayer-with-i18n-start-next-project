@@ -1,4 +1,4 @@
-import getLinkTarget from '@/lib/app-agnostic/react/getLinkTarget';
+import getLinkTarget from '@/lib/functions/react/getLinkTarget';
 import { cn } from '@/lib/tailwind';
 import { Slot } from '@radix-ui/react-slot';
 import type { VariantProps } from 'class-variance-authority';

@@ -1,3 +1,3 @@
-import createURLSearchParams from './app-agnostic/html/createURLSearchParams';
+import createURLSearchParams from './functions/html/createURLSearchParams';
 
 export { createURLSearchParams };
